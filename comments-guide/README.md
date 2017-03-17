@@ -18,17 +18,22 @@
 
 2. 事件注释
     - `DEPRECATED` 弃用代码标记
+
     > ```
     > DEPRECATED by 张三 
     > 原因： XXX   
     > ```
+
     - `TODO:` 将要进行的编写活动
+
     > ```
     > TODO: 编写一个XX功能的模块
     > ```
+
 ## JavaScript
 
 1. 注释有两种
+
     > ```javascript
     > /*
     >  *多行注释
@@ -40,8 +45,11 @@
 ## CSS
 
 1. 有且仅有一种注释方式
+
     > ```
     > /* CSS注释 */
     > ```
 
 ## HTML
+
+## PHP
