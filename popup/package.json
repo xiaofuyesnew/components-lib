@@ -1,7 +1,7 @@
 {
-  "name": "dev-env",
+  "name": "popup",
   "version": "1.0.0",
-  "description": "A basic develop environment on gulp/webpack/vue",
+  "description": "popup layer",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xiaofuyesnew/dev-env/issues"
+    "url": "https://github.com/xiaofuyesnew/components-lib/issues"
   },
   "homepage": "https://github.com/xiaofuyesnew/dev-env#readme",
   "devDependencies": {
