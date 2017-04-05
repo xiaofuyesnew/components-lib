@@ -23,10 +23,9 @@
 
 const gulp = require('gulp')    //gulp main module
 const babel = require('gulp-babel')     //babel module
+const clean = require('gulp-clean')    //clean module
 const htmlminify = require('gulp-html-minify') //htmlminify module
 const cleanCSS = require('gulp-clean-css')   //clean css module
-const inject = require('gulp-inject')    //inject module
-const rename = require('gulp-rename')   //rename module
 const sass = require('gulp-sass')   //sass module
 const uglify = require('gulp-uglifyjs')   //uglify module
 
@@ -133,6 +132,16 @@ gulp.task('tpl:dev', () => {
     return gulp.src('src/tpl/*.html')
         .pipe(gulp.dest('dev'))
         .pipe(reload({stream: true}))
+})
+
+gulp.task('clean:dev', () => {
+    return gulp.src('dev', {read: false})
+        .pipe(clean())
+})
+
+gulp.task('clean', () => {
+    return gulp.src('dist', {read: false})
+        .pipe(clean())
 })
 
 gulp.task('dev', [
