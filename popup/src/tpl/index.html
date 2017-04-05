@@ -7,7 +7,24 @@
     <title>前端组件-弹出层</title>
 </head>
 <body>
-    test
-    <script src="static/js/index.js"></script>
+    <!--
+        @file index.html
+        @author 黄河水
+        @create 2017-04-05
+        @description
+            一个点击弹出层的示例页面
+    -->
+
+
+    <input  id="popup" type="text">
+    <script src="static/js/popup.js"></script>
+    <script>
+        var config = {
+            node: "popup"
+        }
+
+        new Popup(config)
+
+    </script>
 </body>
 </html>

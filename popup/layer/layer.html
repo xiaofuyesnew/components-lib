@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layer</title>
+	<style>
+	</style>
+</head>
+<body>
+	<div id="btn" data-content="我是内容啊"></div>
+<script src="layer.js"></script>
+	<script>
+		// layer.msg('hahahha',{
+		// 	top: '40%'
+		// });
+		layer.confirm({
+			title: {
+				text: '示例弹框',
+				css: {
+					color: 'pink'
+				},
+				close: {
+					css: {
+
+					}
+				}
+			},
+			css: {
+				width: '600px',
+				height: '300px',
+				borderRadius: '0'
+			},
+			btns: [{
+				text: '确认',
+				css: {
+					width: '120px',
+					backgroundColor: '#f40'
+				},
+				click: function(hide){
+					setTimeout(function(){
+						alert(1);
+						hide()
+					},2000)
+				},
+				async: true
+			},{
+				text: '取消',
+				css: {
+					width: '120px',
+					backgroundColor: '#ccc'
+				}
+			},{
+				text: '其他',
+				css: {
+					width: '120px',
+					backgroundColor: 'yellow'
+				},
+				click: function(){
+					alert('其他');
+				}
+			}],
+			content: '我是一个小示例'
+		});
+	</script>
+</body>
+</html>
