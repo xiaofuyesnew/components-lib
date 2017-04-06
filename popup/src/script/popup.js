@@ -20,6 +20,12 @@ var popup = {
  */
 function Popup(config) {
     var node = document.getElementById(config.node)
-    console.log(node.style)
+    console.log(node.offsetHeight)
+    init(node)
 }
 
+function init(node) {
+    if (node.style.display !== 'block') {
+        node.style.display = 'block'
+    }
+}
