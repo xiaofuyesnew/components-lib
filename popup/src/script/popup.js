@@ -12,10 +12,6 @@ var popup = {
     
 }
 
-
-
-
-
 /**
  * @method Popup
  * @param {object} config 
@@ -24,6 +20,6 @@ var popup = {
  */
 function Popup(config) {
     var node = document.getElementById(config.node)
-    console.log(node.style.height)
+    console.log(node.style)
 }
 
