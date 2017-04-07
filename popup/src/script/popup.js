@@ -24,36 +24,36 @@ function init(node) {
     if (node.style.display !== 'block') {
         node.style.display = 'block';
     }
-    var popup = node.nextElementSibling
-    console.log(popup);
+    var popup = node.nextElementSibling;
+    var span = popup.getElementsByTagName('span');
     popup.setAttribute('style', 'width:300px;height:200px;background-color: #e3e3e3;border-radius: 5px;');
+    span[0].setAttribute('style', 'display:block;width: 0;height: 0;float:left;border-bottom: 10px solid #e3e3e3;border-left: 10px solid transparent;border-right: 10px solid transparent;margin-top:-10px;margin-left:20%;')
     /*
     document.styleSheets[0].addRule('.popup::before','color: green'); // 支持IE*/
     /*
-    document.styleSheets[0].insertRule(
-        `.popup::before {
-            content: "";
-            width: 0;
-            height: 0;
-            border-bottom: 10px solid #e3e3e3;
-            float: left;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            margin-top:-10px;
-            margin-left:20%;
-        }`, 0); // 支持非IE的现代浏览器*/
-    console.log(document.styleSheets[0])
-    if (!document.styleSheets[0]) {
+     // 支持非IE的现代浏览器
+    console.log(document.styleSheets[0].cssRules)
+    if (!document.styleSheets[0].cssRules.length) {
         console.log('cssok')
-    }
+        document.styleSheets[0].insertRule(
+            `.popup::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-bottom: 10px solid #e3e3e3;
+                float: left;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                margin-top:-10px;
+                margin-left:20%;
+            }`, 0);
+    }*/
 }
 
-var config1 = {
-        node: "popup1"
-    },
-    config2 = {
-        node: "popup2"
-    }
 
-popup(config1)
-popup(config2)
+popup({
+    node: "popup1"
+})
+popup({
+    node: "popup2"
+})
