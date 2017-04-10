@@ -26,8 +26,12 @@ function init(node) {
     }
     var popup = node.nextElementSibling;
     var span = popup.getElementsByTagName('span');
-    popup.setAttribute('style', 'width:300px;height:200px;background-color: #e3e3e3;border-radius: 5px;');
-    span[0].setAttribute('style', 'display:block;width: 0;height: 0;float:left;border-bottom: 10px solid #e3e3e3;border-left: 10px solid transparent;border-right: 10px solid transparent;margin-top:-10px;margin-left:20%;')
+    popup.setAttribute('style', 'width:300px;height:200px;background-color: #eee;border-radius: 5px;border: 1px solid #ccc;margin-top: 20px;');
+    span[1].setAttribute('style', 'display:block;width: 0;height: 0;float:left;border-bottom: 10px solid #eee;border-left: 10px solid transparent;border-right: 10px solid transparent;margin-top:-10px;margin-left:20%;')
+    span[0].setAttribute('style', 'display:block;width: 0;height: 0;float:left;border-bottom: 10px solid #ccc;border-left: 10px solid transparent;border-right: 10px solid transparent;margin-top:-11px;margin-left:20%;')
+    popup.getElementsByClassName('content')
+    console.log(popup.getElementsByClassName('content')[0])
+    //.setAttribute('style', 'width: 100%;')
     /*
     document.styleSheets[0].addRule('.popup::before','color: green'); // 支持IE*/
     /*
