@@ -14,22 +14,19 @@
         @description
             一个点击弹出层的示例页面
     -->
-    <div class="popup">
-        
-    </div>
-    <input id="popup1" type="text">
-    <div class="popup">
-        <span></span>
-        <span></span>
-        <div class="content">
-            一些字幕
-        </div>
-    </div>
-    <input id="popup2" type="text">
-    <div class="popup">
-        <span></span>
-        <span></span>
-    </div>
+    <div id="popup"></div>
     <script src="static/js/popup.js"></script>
+    <script>
+        popup({
+            node: "popup",
+            type: {
+                show: true,
+                main: "input",
+                type: "text",
+                class: []
+            },
+            
+        });
+    </script>
 </body>
 </html>
