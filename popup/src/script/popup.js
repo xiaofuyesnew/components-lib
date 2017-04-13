@@ -109,6 +109,7 @@ function mnbdEvent(node) {
     node.firstChild.addEventListener('focus', (e) => {
         e.target.nextElementSibling.style.opacity = '1';
     }, true);
+    
     /*
     node.firstChild.addEventListener('blur', (e) => {
         e.target.nextElementSibling.style.opacity = '0';
