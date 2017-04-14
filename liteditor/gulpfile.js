@@ -66,6 +66,17 @@ gulp.task('cpcss:dev', () => {
         .pipe(reload({stream: true}))
 })
 
+gulp.task('cpfonts', () => {
+    return gulp.src('src/lib/dist/fonts/*.*')
+        .pipe(gulp.dest('dist/static/lib/fonts'))
+})
+
+gulp.task('cpfonts:dev', () => {
+    return gulp.src('src/lib/dev/fonts/*.*')
+        .pipe(gulp.dest('dev/static/lib/fonts'))
+        .pipe(reload({stream: true}))
+})
+
 //compile and uglify js
 gulp.task('js', () => {
     return gulp.src('src/script/*.js')
@@ -148,6 +159,7 @@ gulp.task('dev', [
     'cpimg:dev', 
     'cpjs:dev', 
     'cpcss:dev',  
+    'cpfonts:dev',
     'js:dev', 
     'sass:dev', 
     'css:dev', 
@@ -161,6 +173,7 @@ gulp.task('dev', [
         gulp.watch('src/image/*.*', ['cpimg:dev'])
         gulp.watch('src/lib/dev/js/*.js', ['cpjs:dev'])
         gulp.watch('src/lib/dev/css/*.css', ['cpcss:dev'])
+        gulp.watch('src/lib/dev/css/fonts/*.*', ['cpfonts:dev'])
         gulp.watch('src/script/*.js', ['js:dev'])
         gulp.watch('src/style/sass/*.scss', ['sass:dev'])
         gulp.watch('src/style/css/*.css', ['css:dev'])
@@ -171,6 +184,7 @@ gulp.task('build', [
     'cpimg', 
     'cpjs', 
     'cpcss', 
+    'cpfonts',
     'js', 
     'sass', 
     'css', 

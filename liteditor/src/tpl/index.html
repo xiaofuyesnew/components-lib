@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>liteditor</title>
+    <link rel="stylesheet" href="static/lib/css/wangEditor.css">
+</head>
+<body>
+    <div style="width: 1100px;">
+        <div id="editor" style="height:200px;">
+            <p>请输入内容...</p>
+        </div>
+    </div>
+
+    <script src="static/lib/js/jquery-2.2.1.js"></script>
+    <script src="static/lib/js/wangEditor.js"></script>
+    <script>
+        var editor = new wangEditor('editor');
+        editor.create();
+
+        $('#editor').click(function () {
+            if ($($('#editor p')[0]).html() === '请输入内容...') {
+                $($('#editor p')[0]).remove();
+            }
+        })
+    </script>
+</body>
+</html>
