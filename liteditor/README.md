@@ -6,6 +6,9 @@
 
 下载本代码包，终端进入本目录
 ```bash
+#下载，找到下载后的liteditor文件夹
+git clone https://github.com/xiaofuyesnew/components-lib.git
+
 #安装依赖包
 npm install
 
