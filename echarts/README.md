@@ -30,7 +30,7 @@ npm run build
 </head>
 <body>
 
-    <!-- echarts节点，自定义属性用于装载后台数据配置JSON字符串 -->
+    <!-- echarts节点，data-*自定义属性用于装载后台数据配置JSON字符串 -->
     <div id="bar" style="width:640px;height:480px;float:left;" data-echarts='{"title":{"text": "Echarts 柱状图"},"tooltip": {},"legend": {"data":["销量"]},"xAxis": {"data": ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]},"yAxis": {},"series": [{"name": "销量","type": "bar","data": [5, 20, 36, 10, 10, 20]}]}'></div>
     ...
 
