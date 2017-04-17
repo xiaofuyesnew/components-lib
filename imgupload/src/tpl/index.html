@@ -7,21 +7,27 @@
     <title>imgupload</title>
 </head>
 <body>
+    <!-- 插入插件主节点 -->
     <div id="imgupload"></div>
 
+    <!-- 必须：插入imgupload函数文件 -->
     <script src="static/js/imgupload.js"></script>
     <script>
         imgupload({
-            node: "imgupload",
-            width: "200px",
-            height: "200px",
-            class: [],
-            extra: {
+            node: "imgupload",  //插入插件的节点id
+            width: "200px",     //插件宽度
+            height: "200px",    //插件高度
+            class: [],          //插件样式关联的class名
+            extra: {            //扩展显示（显示不同尺寸的预览，暂不启用）
                 small: true,
                 middle: true,
                 large: true,
+            },
+            ajax: {             //ajax相关配置，定义接受文件的接口和传输类型
+                url: '',
+                type: ''
             }
-        })
+        });
     </script>
 </body>
 </html>

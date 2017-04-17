@@ -58,9 +58,11 @@ function imgupload(config) {
             return;
         }
 
+
+        console.log(fileInput.files);
         var file = fileInput.files[0];
 
-        if (file.type !== 'image/jpg' && file.type !== 'image/png' && 
+        if (file.type !== 'image/jpeg' && file.type !== 'image/png' && 
                 file.type !== 'image/gif') {
             console.log('不是有效的文件格式！');
             return;
@@ -73,6 +75,19 @@ function imgupload(config) {
             fileShow.setAttribute('src', data);
         }
         reader.readAsDataURL(file);
-    })   
+
+
+        //可选接口ajax上传文件,暂时不启用
+        /*
+        $.ajax({
+            url: "server api",
+            type: "POST",
+            data: fileInput.files,
+            success: () => {
+                console.log('上传成功')
+            }
+        })
+         */
+    })
 }
 
