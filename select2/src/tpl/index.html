@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select 2</title>
+    <!-- 必须：插件样式 -->
+    <link rel="stylesheet" href="static/lib/css/select2.css">
+</head>
+<body>
+    <select class="test" multiple="multiple" style="width: 200px;">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+        <option value="d">d</option>
+    </select>
+    <!-- 必须：插件主体程序 -->
+    <script src="static/lib/js/jquery-2.1.0.js"></script>
+    <script src="static/lib/js/select2.full.js"></script>
+    <script>
+        $('.test').select2();
+    </script>
+</body>
+</html>
