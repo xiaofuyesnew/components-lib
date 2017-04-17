@@ -47,21 +47,22 @@ npm run build
     <script>
         //实例化参数是页面结构中的编辑器主体节点id
         var editor = new wangEditor('editor');
+
         editor.config.uploadImgUrl = '/upload';
 
-        // 配置自定义参数（举例）
+        // 配置自定义参数
         editor.config.uploadParams = {
             
         };
 
-        // 设置 headers（举例）
+        // 设置 headers
         editor.config.uploadHeaders = {
-        
+            'Accept' : 'text/x-json'
         };
 
         // 隐藏掉插入网络图片功能。该配置，只有在你正确配置了图片上传功能之后才可用。
         editor.config.hideLinkImg = true;
-        
+
         editor.create();
 
         //自定义补丁，点击浏览器初始提示语消失
