@@ -47,5 +47,32 @@ function imgupload(config) {
         cursor: pointer;
         opacity:0;
     `);
+
+    //时间监听
+    fileInput.addEventListener('change', () => {
+        
+        //清空预览图片
+        fileShow.setAttribute('src', '');
+
+        if (!fileInput.value) {
+            return;
+        }
+
+        var file = fileInput.files[0];
+
+        if (file.type !== 'image/jpg' && file.type !== 'image/png' && 
+                file.type !== 'image/gif') {
+            console.log('不是有效的文件格式！');
+            return;
+        }
+
+        //文件读取
+        var reader = new FileReader();
+        reader.onload = (e) => {
+            var data = e.target.result;
+            fileShow.setAttribute('src', data);
+        }
+        reader.readAsDataURL(file);
+    })   
 }
 
