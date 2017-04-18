@@ -45,12 +45,12 @@ gulp.task('cpimg:dev', () => {
 })
 
 gulp.task('cpjs', () => {
-    return gulp.src('src/lib/dist/js/*.js')
+    return gulp.src('src/lib/dist/js/*.*')
         .pipe(gulp.dest('dist/static/lib/js'))
 })
 
 gulp.task('cpjs:dev', () => {
-    return gulp.src('src/lib/dev/js/*.js')
+    return gulp.src('src/lib/dev/js/*.*')
         .pipe(gulp.dest('dev/static/lib/js'))
         .pipe(reload({stream: true}))
 })
@@ -171,7 +171,7 @@ gulp.task('dev', [
             notify: false
         })
         gulp.watch('src/image/*.*', ['cpimg:dev'])
-        gulp.watch('src/lib/dev/js/*.js', ['cpjs:dev'])
+        gulp.watch('src/lib/dev/js/*.*', ['cpjs:dev'])
         gulp.watch('src/lib/dev/css/*.css', ['cpcss:dev'])
         gulp.watch('src/lib/dev/css/fonts/*.*', ['cpvideo:dev'])
         gulp.watch('src/script/*.js', ['js:dev'])
