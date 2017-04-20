@@ -108,7 +108,7 @@ function popup(config) {
 }
 
 function mnbdEvent(node) {
-    node.firstChild.addEventListener('focus', (e) => {
+    node.firstChild.addEventListener('click', (e) => {
         if (e.target.nextElementSibling.style.opacity === '0') {
             e.target.nextElementSibling.style.opacity = '1';
         } else {
