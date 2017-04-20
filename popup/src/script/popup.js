@@ -56,6 +56,8 @@ function popup(config) {
 
         //注入input
         node.appendChild(el);
+
+        
     }
 
 
@@ -107,14 +109,31 @@ function popup(config) {
 
 function mnbdEvent(node) {
     node.firstChild.addEventListener('focus', (e) => {
-        e.target.nextElementSibling.style.opacity = '1';
+        if (e.target.nextElementSibling.style.opacity === '0') {
+            e.target.nextElementSibling.style.opacity = '1';
+        } else {
+            e.target.nextElementSibling.style.opacity = '0';
+        }
     }, true);
-    
-    /*
+/*
     node.firstChild.addEventListener('blur', (e) => {
-        e.target.nextElementSibling.style.opacity = '0';
+        if (e.target.nextElementSibling.style.opacity === '0') {
+            e.target.nextElementSibling.style.opacity = '1';
+        } else {
+            e.target.nextElementSibling.style.opacity = '0';
+        }
     }, true);
-    */
+
+    node.children[1].addEventListener('mouseout', () => {
+        node.firstChild.removeEventListener('blur', (e) => {
+            if (e.target.nextElementSibling.style.opacity === '0') {
+                e.target.nextElementSibling.style.opacity = '1';
+            } else {
+                e.target.nextElementSibling.style.opacity = '0';
+            }
+        }, true);
+        console.log('ok')
+    })*/
 }
 
 
