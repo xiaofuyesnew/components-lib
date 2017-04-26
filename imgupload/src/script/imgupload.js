@@ -27,7 +27,6 @@ function imgupload(config) {
     var fileShow = node.getElementsByTagName('img')[0];
 
     fileShow.setAttribute('style', `
-        position:absolute;
         width:${config.width || def.width};
         height:${config.height || def.height};
     `);
@@ -40,6 +39,8 @@ function imgupload(config) {
     fileInput.setAttribute('type', 'file');
     fileInput.setAttribute('style', `
         position:absolute;
+        left:0;
+        top:0;
         border:none;
         padding:0;
         width:${config.width || def.width};
